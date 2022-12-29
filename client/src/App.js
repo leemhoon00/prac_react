@@ -8,8 +8,8 @@ import TableHead from '@mui/material/TableHead';
 import TableBody from '@mui/material/TableBody';
 import TableRow from '@mui/material/TableRow';
 import TableCell from '@mui/material/TableCell';
-
-
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 class App extends React.Component {
 
@@ -57,7 +57,12 @@ class App extends React.Component {
                   job={c.job}
                 />
               )
-            }) : ""
+            }) :
+            <TableRow>
+              <TableCell colSpan="6" align="center">
+                <CircularProgress />
+              </TableCell>
+            </TableRow>
           }
           </TableBody>
         </Table>
